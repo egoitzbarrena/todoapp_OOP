@@ -9,14 +9,14 @@ class Usuarios {
 
 
 	 	
-	function __construct($id_usuario,$nombre,$password,$tipo){ 
+	public function __construct($id_usuario='',$nombre='',$password='',$tipo=''){ 
       	 $this->id_usuario=$id_usuario; 
       	 $this->nombre=$nombre;
-	 $this->password=$password;
-	 $this->tipo=$tipo;
+	     $this->password=$password;
+	     $this->tipo=$tipo;
    	} 
 
-	function add_user($nombre,$password){
+	public function add_user($nombre,$password){
 	include 'conexion.php';
         $stmt = $pdo->prepare ("INSERT INTO usuarios (nombre, password) VALUES(:nombre , :password)");
 	$stmt->execute(array("nombre" => $nombre,"password" => $password));
