@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> index.html </title>
+	<title> index.php </title>
 	<link rel='stylesheet' type='text/css' href='login.css'/>
 </head>
 <body>
